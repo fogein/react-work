@@ -1,0 +1,36 @@
+/* Input */
+
+.input__form{
+  display: flex;
+  align-items: center;
+  max-width: 366px;
+  height: 92px;
+}
+.label__form{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #707070;
+  margin-bottom: 8px;
+}
+.input{
+  min-width: 366px;
+  background: #F6F6F6;
+  border-radius: 4px;
+  border:none;
+  height: 40px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #303030;
+}
+.input:hover{
+  background: #D1D1D1;
+}
+.input:focus{
+  box-shadow: 0px 0px 5px #D9D9D9;
+}
+.input:disabled{
+  color: #D1D1D1;
+}
+/* Input end */

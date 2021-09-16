@@ -1,0 +1,14 @@
+@import '../Components/header/header.css';
+@import '../Components/Navbar/Navbar.css';
+@import '../Components/Card_team/cardTeam.css';
+@import '../Components/Card_player/cardPlayer.css';
+@import '../Components/TeamSmallCard/teamSmallCard.css';
+@import '../Components/PlayerSmallCard/playerSmallCard.css';
+@import '../Components/input/input.css';
+@import '../Components/Buttons/SignIn/sign_in-but.css';
+@import '../Components/Buttons/Add_button/add_button.css';
+@import '../Components/Buttons/Cancel_button/cancel_button.css';
+@import '../Components/ImageUpload/ImageUpload.css';
+@import '../Components/Table/Table.css';
+@import '../Pages/PageNotFound/PageNotFound.css';
+@import '../Pages/page_enter/SignIn.css';

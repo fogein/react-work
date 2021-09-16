@@ -1,0 +1,10 @@
+.image__upload-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 185px;
+  height: 144px;
+  background: #9C9C9C url('../../assets/imageUploadBG.svg') no-repeat;
+  opacity: 0.5;
+  border-radius: 10px;
+}

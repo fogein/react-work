@@ -1,0 +1,41 @@
+.sign_in-container{
+  display: flex;
+  background: #F5FBFF;
+  width: 100%;
+}
+.sign_in-form{
+  background:#fff;
+  display: flex;
+  width: 606px;
+  height: 1024px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sign_in-title{
+  font-size: 36px;
+  line-height: 49px;
+  color: #344472;
+}
+.sign_in-description{
+  margin-top: 24px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #707070;
+}
+.link_signUp{
+  color:#E4163A;
+}
+.sign_in-bg{
+  width: 834px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sign_in-img{
+  width: 605px;
+  height: 412px;
+  display: flex;
+
+}

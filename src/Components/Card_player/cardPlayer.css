@@ -1,0 +1,123 @@
+button{
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+}
+.container__cardPlayer{
+  margin: 32px 0 24px 80px;
+  width: 1140px;
+  height: 594px;
+}
+.top__cardPlayer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 69px;
+  background: #FFFFFF;
+  border: 0.5px solid #9C9C9C;
+  border-radius: 10px 10px 0px 0px;
+}
+
+
+.about__cardPlayer{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #E4163A;
+  margin-left: 32px;
+}
+.about__cardPlayer > span > span{
+  color: #9C9C9C;
+}
+.edit__cardPlayer{
+  margin-right: 32px;
+  display: flex;
+}
+.edit__cardPlayer > button{
+  margin-right: 16px;
+}
+/* top end */
+.main__cardPlayer{
+  color: #fff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  background: linear-gradient(276.45deg, #707070 0%, #393939 100.28%);
+  border-radius: 10px 10px 0px 0px;
+  max-height: 525px;
+  flex-wrap: wrap;
+}
+.logo__cardPlayer{
+  margin: 66px 56px 0 0;
+  width: 531px;
+  height: 531px;
+}
+.abilitys{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 390px;
+}
+.name__cardPlayer{
+  margin-top: 65px;
+}
+.name__cardPlayer > h2{
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 49px;
+}
+.name__cardPlayer > h2 > span{
+  color: #FF5761;
+}
+.text{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+}
+.Position__cardPlayer{
+  margin-top: 40px;
+}
+.Position__cardPlayer > h3{
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  margin-bottom: 8px;
+}
+.Height__cardPlayer{
+  margin-top: 54px;
+}
+.Height__cardPlayer > h3{
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  margin-bottom: 8px;
+}
+.Age__cardPlayer{
+  margin-top: 54px;
+}
+.Age__cardPlayer > h3{
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  margin-bottom: 8px;
+}
+.Team__cardPlayer{
+  margin-top: 40px;
+}
+.Team__cardPlayer > h3{
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  margin-bottom: 8px;
+}
+.Weight__cardPlayer{
+  margin-top: 54px;
+}
+.Weight__cardPlayer > h3{
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  margin-bottom: 8px;
+}
