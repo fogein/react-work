@@ -1,0 +1,41 @@
+.sign_up-container{
+  display: flex;
+  background: #F5FBFF;
+  width: 100%;
+}
+.sign_up-form{
+  background:#fff;
+  display: flex;
+  width: 606px;
+  height: 1024px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sign_up-title{
+  font-size: 36px;
+  line-height: 49px;
+  color: #344472;
+}
+.sign_up-description{
+  margin-top: 24px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #707070;
+}
+.link_signIn{
+  color:#E4163A;
+}
+.sign_up-bg{
+  width: 834px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sign_up-img{
+  width: 605px;
+  height: 412px;
+  display: flex;
+
+}

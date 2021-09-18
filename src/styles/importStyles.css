@@ -12,3 +12,5 @@
 @import '../Components/Table/Table.css';
 @import '../Pages/PageNotFound/PageNotFound.css';
 @import '../Pages/page_enter/SignIn.css';
+@import '../Pages/SignUp/SignUp.css';
+@import '../Pages/page_enter_error/SignInError.css';
