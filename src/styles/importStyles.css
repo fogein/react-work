@@ -16,4 +16,6 @@
 @import '../Pages/page_enter_error/SignInError.css';
 @import '../Components/Search/Search.css';
 @import '../Pages/card_teams/card_teams.css';
-@import '../Pages/card_players/card_players.css'
+@import '../Pages/card_players/card_players.css';
+@import '../Pages/teams_Empty/teams_empty.css';
+/* @import '../Pages/players_Empty/players_empty.css'; */

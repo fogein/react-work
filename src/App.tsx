@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable react/jsx-pascal-case */
 import './styles/importStyles.css'
 import './App.css';
 import { Header } from './Components/header/Header';
@@ -18,11 +20,12 @@ import { SignUp } from './Pages/SignUp/SignUp';
 import { SignInError } from './Pages/page_enter_error/SignInError';
 import { Card_teams } from './Pages/card_teams/card_teams';
 import { Card_players } from './Pages/card_players/card_players';
+import { Teams_empty } from './Pages/teams_Empty/teams_empty';
 
 function App() {
   return (
     <>
-      <Card_players/>
+      <Card_teams/>
     </>
   );
 }
