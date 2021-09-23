@@ -17,11 +17,12 @@ import { SignIn } from './Pages/page_enter/SignIn';
 import { SignUp } from './Pages/SignUp/SignUp';
 import { SignInError } from './Pages/page_enter_error/SignInError';
 import { Card_teams } from './Pages/card_teams/card_teams';
+import { Card_players } from './Pages/card_players/card_players';
 
 function App() {
   return (
     <>
-      <Card_teams/>
+      <Card_players/>
     </>
   );
 }

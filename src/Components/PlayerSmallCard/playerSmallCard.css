@@ -5,6 +5,7 @@
   height: 100%;
 }
 .small__cardPayers-top{
+  width: 364px;
   height: 280px;
   display: flex;
   justify-content: center;
