@@ -1,0 +1,22 @@
+
+.card_teams-container{
+
+}
+.upContainer{
+  flex-wrap: wrap;
+  height: 40px;
+  width: 1140px;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 32px;
+  justify-content: space-between;
+}
+
+.mainContainer{
+  padding-left: 80px;
+  justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  
+  width: 1300px;
+}

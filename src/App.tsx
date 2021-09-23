@@ -16,11 +16,12 @@ import {PageNotFound} from './Pages/PageNotFound/PageNotFound'
 import { SignIn } from './Pages/page_enter/SignIn';
 import { SignUp } from './Pages/SignUp/SignUp';
 import { SignInError } from './Pages/page_enter_error/SignInError';
+import { Card_teams } from './Pages/card_teams/card_teams';
 
 function App() {
   return (
     <>
-      <SignInError/>
+      <Card_teams/>
     </>
   );
 }

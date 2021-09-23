@@ -1,7 +1,7 @@
 import React from 'react'
 import smallCardTeam from '../../assets/teamSmallCard.svg'
 
-export const TeamSmallCard:React.FC = () => {
+export const TeamSmallCard:React.FC = (props:any) => {
   return (
     // Team card
     <>
@@ -12,7 +12,7 @@ export const TeamSmallCard:React.FC = () => {
         </div>
         <div className="small__card-bot">
           <div className="small__card-deskription">
-            <h4>Portland trail blazers</h4>
+            <h4 >Portland trail blazers</h4>
             <p className='small__card-p'>Year of foundation: 1970</p>
           </div>
         </div>
