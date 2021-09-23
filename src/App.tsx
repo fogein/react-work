@@ -23,11 +23,12 @@ import { Card_players } from './Pages/card_players/card_players';
 import { Teams_empty } from './Pages/teams_Empty/teams_empty';
 import { Players_empty } from './Pages/players_Empty/players_empty';
 import { Details_player } from './Pages/details_player/details_player';
+import { Details_team } from './Pages/details_team/details_team';
 
 function App() {
   return (
     <>
-      <Details_player/>
+      <Details_team/>
     </>
   );
 }

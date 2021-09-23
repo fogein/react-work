@@ -25,6 +25,57 @@ export const Table: React.FC = () => {
           {/* col-1 end*/}
 
         </tr>
+        <tr className="body__table">
+          {/* col-1 */}
+          <td className="body__table-item">10</td>
+          <td className="body__table-item"><div className="player__block"><img className="table__img" src={tablePlayer} alt="player_img"/> <span>Bol Bol <p>Centerforward</p></span></div></td>
+          <td className="body__table-item">218 cm</td>
+          <td className="body__table-item">100 kg</td>
+          <td className="body__table-item">21</td>
+          {/* col-1 end*/}
+
+        </tr>
+        <tr className="body__table">
+          {/* col-1 */}
+          <td className="body__table-item">10</td>
+          <td className="body__table-item"><div className="player__block"><img className="table__img" src={tablePlayer} alt="player_img"/> <span>Bol Bol <p>Centerforward</p></span></div></td>
+          <td className="body__table-item">218 cm</td>
+          <td className="body__table-item">100 kg</td>
+          <td className="body__table-item">21</td>
+          {/* col-1 end*/}
+
+        </tr>
+        <tr className="body__table">
+          {/* col-1 */}
+          <td className="body__table-item">10</td>
+          <td className="body__table-item"><div className="player__block"><img className="table__img" src={tablePlayer} alt="player_img"/> <span>Bol Bol <p>Centerforward</p></span></div></td>
+          <td className="body__table-item">218 cm</td>
+          <td className="body__table-item">100 kg</td>
+          <td className="body__table-item">21</td>
+          {/* col-1 end*/}
+
+        </tr>
+        <tr className="body__table">
+          {/* col-1 */}
+          <td className="body__table-item">10</td>
+          <td className="body__table-item"><div className="player__block"><img className="table__img" src={tablePlayer} alt="player_img"/> <span>Bol Bol <p>Centerforward</p></span></div></td>
+          <td className="body__table-item">218 cm</td>
+          <td className="body__table-item">100 kg</td>
+          <td className="body__table-item">21</td>
+          {/* col-1 end*/}
+
+        </tr>
+        <tr className="body__table">
+          {/* col-1 */}
+          <td className="body__table-item">10</td>
+          <td className="body__table-item"><div className="player__block"><img className="table__img" src={tablePlayer} alt="player_img"/> <span>Bol Bol <p>Centerforward</p></span></div></td>
+          <td className="body__table-item">218 cm</td>
+          <td className="body__table-item">100 kg</td>
+          <td className="body__table-item">21</td>
+          {/* col-1 end*/}
+
+        </tr>
+        
 
       </table>
       </div>
