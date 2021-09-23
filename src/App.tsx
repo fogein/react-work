@@ -21,11 +21,12 @@ import { SignInError } from './Pages/page_enter_error/SignInError';
 import { Card_teams } from './Pages/card_teams/card_teams';
 import { Card_players } from './Pages/card_players/card_players';
 import { Teams_empty } from './Pages/teams_Empty/teams_empty';
+import { Players_empty } from './Pages/players_Empty/players_empty';
 
 function App() {
   return (
     <>
-      <Card_teams/>
+      <Players_empty/>
     </>
   );
 }
