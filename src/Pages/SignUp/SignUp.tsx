@@ -12,6 +12,11 @@ export const SignUp: React.FC = () => {
           <Input label="Login" />
           <Input label="Password" />
           <Input label="Enter your password again" />
+          <div className="checkbox_div">
+          <input type="checkbox" id="accept"/>
+          <label htmlFor="accept">I accept the agreement</label>
+          </div>
+          
           <Sign_In_but/>
           <span className="sign_up-description">Not a member yet? <a href="#" className="link_signIn">Sign in</a></span>
 
