@@ -25,12 +25,11 @@ import { Players_empty } from './Pages/players_Empty/players_empty';
 import { Details_player } from './Pages/details_player/details_player';
 import { Details_team } from './Pages/details_team/details_team';
 
-function App() {
+export const App:React.FC = () => {
   return (
     <>
-      <Details_team/>
+      <SignUp />
     </>
   );
 }
 
-export default App;

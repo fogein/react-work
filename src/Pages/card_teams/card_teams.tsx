@@ -20,7 +20,7 @@ export const Card_teams: React.FC = () => {
             <Add_button/>
           </div>
           <div className="mainContainer">
-            <TeamSmallCard/>
+            <TeamSmallCard />
             <TeamSmallCard/>
             <TeamSmallCard/>
             <TeamSmallCard/>
