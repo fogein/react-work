@@ -6,7 +6,7 @@ import { Sign_In_but } from '../../Components/Buttons/SignIn/Sign_In-but'
 import { Input } from '../../Components/input/Input'
 import signInBg from '../../assets/SignInBg.png'
 
-export const SignIn: React.FC = () => {
+export const SignIn = (props:any) => {
   return (
       <div className="sign_in-container">
         <div className="sign_in-form">
@@ -15,7 +15,7 @@ export const SignIn: React.FC = () => {
           <Input label="Login" />
           <Input label="Password" />
           </form>
-          <Sign_In_but/>
+          <Sign_In_but label="Sign In"/>
           <span className="sign_in-description">Not a member yet? <a href="#" className="link_signUp">Sign up</a></span>
 
         </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Sign_In_but: React.FC= (props:any) => {
+export const Sign_In_but= (props:any) => {
   return (
       <>
         <div className="container__sign-in">

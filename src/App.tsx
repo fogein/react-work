@@ -28,7 +28,7 @@ import { Details_team } from './Pages/details_team/details_team';
 export const App:React.FC = () => {
   return (
     <>
-      <SignUp />
+      <SignIn />
     </>
   );
 }
