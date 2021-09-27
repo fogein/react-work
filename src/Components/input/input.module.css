@@ -1,20 +1,18 @@
 /* Input */
 
-.input__form{
-  display: flex;
-  align-items: center;
+.Input{
   max-width: 366px;
   height: 92px;
   
 }
-.label__form{
+.Input label{
   font-weight: 500;
   font-size: 14px;
   line-height: 24px;
   color: #707070;
   margin-bottom: 8px;
 }
-.input{
+.Input input{
   min-width: 366px;
   background: #F6F6F6;
   border-radius: 4px;
@@ -25,6 +23,15 @@
   line-height: 24px;
   color: #303030;
 }
+.Input span{
+  font-weight: bold;
+  font-size: 17px;
+  color:red;
+  width: 100%;
+}
+.Input.invalid label {
+  color: red;
+}
 /* .input:hover{
   background: #D1D1D1;
 }
@@ -34,10 +41,10 @@
 .input:disabled{
   color: #D1D1D1;
 } */
-.errorMesage{
+/* .errorMesage{
   font-weight: 500;
   font-size: 12px;
   line-height: 24px;
   color: #FF768E;
-}
+} */
 /* Input end */
