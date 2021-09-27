@@ -52,7 +52,7 @@ export const SignIn:React.FC = () => {
     event.preventDefault()
   }
   const onChangeHadler = (event: any, controlName: any) => {
-    console.log(`${controlName}:`, event.target.value)
+    console.log(`${controlName}:`, event.nativeEvent.data )
   }
 
 
@@ -69,7 +69,7 @@ export const SignIn:React.FC = () => {
         label={control.label}
         shouldValidate={!!control.validation}
         errorMesage={control.errorMesage}
-        onChange={(event: any) => onChangeHadler (controlName ,event) }
+        onChange={(event: any) => onChangeHadler (event,controlName) }
         />
       )
     })
