@@ -1,13 +1,25 @@
-import React from 'react'
+import * as React from 'react'
 let classes = require( './input.module.css')
 
 
-const isInvalid = ({valid, touched, shouldValidate}:any) =>{
+const isInvalid  = ({valid, touched, shouldValidate}:FunctionComponent) =>{
   return !valid && shouldValidate && touched
 }
 
+interface FunctionComponent  {
+  props:any
+  type:any
+  errorMessage:any
+  value:any
+  onChange:any
+  label:any
+  valid:any
+  touched:any
+  shouldValidate:any
 
-export const Input = (props:any) => { 
+}
+
+export const Input:React.FC <FunctionComponent> = (props) => { 
   const inputType = props.type || "text"
   const cls = [classes.Input]
   const htmlFor = `${inputType}-${Math.random()}`

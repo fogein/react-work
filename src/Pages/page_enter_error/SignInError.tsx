@@ -9,8 +9,7 @@ export const SignInError: React.FC = () => {
         
         <div className="sign_inE-form">
           <h1 className="sign_inE-title">Sign In</h1>
-          <Input label="Login" />
-          <Input label="Password" error="Wrong password. Please, try again." />
+          <form action=""></form>
           <Sign_In_but/>
           <span className="sign_inE-description">Not a member yet? <a href="#" className="link_signUp">Sign up</a></span>
 

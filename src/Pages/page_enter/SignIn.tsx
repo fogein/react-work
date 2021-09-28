@@ -7,11 +7,19 @@ import { Sign_In_but } from '../../Components/Buttons/SignIn/Sign_In-but'
 import { Input } from '../../Components/input/Input'
 import signInBg from '../../assets/SignInBg.png'
 
-  interface myProps {
 
+
+function validateEmail(email: any) {
+  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
+
+  interface myProps {
+    value?:string
+    validation?:any
   }
   interface myState {
-    formControls:any
+    formControls?:any
   }
 
 
@@ -62,7 +70,7 @@ export class SignIn extends React.Component<myProps, myState> {
     event.preventDefault()
   }
 
-   validateControl = (value: any, validation: any) => {
+   validateControl = (value: string, validation: { requered: any; email: any; minLength: any; }) => {
       if (!validation){
         return true
       }
@@ -71,12 +79,12 @@ export class SignIn extends React.Component<myProps, myState> {
           isValid = value.trim() !=="" && isValid
         }
         if (validation.email) {
-
+          isValid = validateEmail(value) && isValid
         }
         if (validation.minLength) {
-
+          isValid = value.length >= validation.minLength && isValid
         }
-        return isValid
+        return isValid 
   }
 
    onChangeHadler = (event: any, controlName: any) => {
@@ -104,16 +112,15 @@ export class SignIn extends React.Component<myProps, myState> {
       const control = this.state.formControls[controlName]
       return (
         <Input
-        key={controlName + index}
-        type={control.type}
-        value={control.value}
-        valid={control.valid}
-        touched={control.touched}
-        label={control.label}
-        shouldValidate={!!control.validation}
-        errorMesage={control.errorMesage}
-        onChange={(event: any) => this.onChangeHadler (event,controlName) }
-        />
+          key={controlName + index}
+          type={control.type}
+          value={control.value}
+          valid={control.valid}
+          touched={control.touched}
+          label={control.label}
+          shouldValidate={!!control.validation}
+          errorMessage={control.errorMesage}
+          onChange={(event: any) => this.onChangeHadler(event, controlName)} props={undefined}        />
       )
     })
   }

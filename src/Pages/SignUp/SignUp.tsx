@@ -8,10 +8,9 @@ export const SignUp: React.FC = () => {
       <div className="sign_up-container">
         <div className="sign_up-form">
           <h1 className="sign_up-title">Sign Up</h1>
-          <Input label="Name" />
-          <Input label="Login" />
-          <Input label="Password" />
-          <Input label="Enter your password again" />
+          <form action="">
+            
+          </form>
           <div className="checkbox_div">
           <input type="checkbox" id="accept"/>
           <label htmlFor="accept">I accept the agreement</label>
