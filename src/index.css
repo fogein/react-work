@@ -3,4 +3,9 @@
   width: 100%;
   flex-wrap: wrap;
   height: 100%;
+  font-family: "Avenir";  
 }
+@font-face {
+  font-family: "Avenir";  
+  src: url("./assets/fonts/Avenir-Medium.ttf") format("truetype"); 
+   }

@@ -1,64 +1,107 @@
+/* eslint-disable no-this-before-super */
 /* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/jsx-pascal-case */
+import * as React from 'react'
 import { Sign_In_but } from '../../Components/Buttons/SignIn/Sign_In-but'
 import { Input } from '../../Components/input/Input'
 import signInBg from '../../assets/SignInBg.png'
 
+  interface myProps {
 
-export interface ISignIn {
-  props?:any
-}
+  }
+  interface myState {
+    formControls:any
+  }
 
 
-export const SignIn:React.FC = () => {
+export class SignIn extends React.Component<myProps, myState> {
 
- const state: any = {
-    formControls:{
-      email: {
-        value:'',
-        type:'email',
-        label:'E-mail',
-        errorMesage:'Введите коректный емаил',
-        valid:false,
-        touched:false,
-        validation:{
-          required:false,
-          email:true
-        }
-      },
-      password: {
+  constructor (props: any){
+    super(props);
+
+    this.state = {
+      formControls:{
+        email: {
           value:'',
-          type:'password',
-          label:'Password',
-          errorMesage:'Введите коректный password',
+          type:'email',
+          label:'E-mail',
+          errorMesage:'Введите коректный емаил',
           valid:false,
           touched:false,
           validation:{
             required:false,
-            minLength:6
+            email:true
           }
+        },
+        password: {
+            value:'',
+            type:'password',
+            label:'Password',
+            errorMesage:'Введите коректный password',
+            valid:false,
+            touched:false,
+            validation:{
+              required:false,
+              minLength:6
+            }
+        }
       }
     }
   }
 
-  const loginHandler = () =>{
+  
+
+   loginHandler = () =>{
 
   }
-  const registerHandler = () =>{
+   registerHandler = () =>{
 
   }
-  const submitHandler = (event: { preventDefault: () => void }) =>{
+   submitHandler = (event: { preventDefault: () => void }) =>{
     event.preventDefault()
   }
-  const onChangeHadler = (event: any, controlName: any) => {
-    console.log(`${controlName}:`, event.nativeEvent.data )
+
+   validateControl = (value: any, validation: any) => {
+      if (!validation){
+        return true
+      }
+        let isValid = true 
+        if (validation.requered) {
+          isValid = value.trim() !=="" && isValid
+        }
+        if (validation.email) {
+
+        }
+        if (validation.minLength) {
+
+        }
+        return isValid
+  }
+
+   onChangeHadler = (event: any, controlName: any) => {
+    console.log(`${controlName}:`, event.target.value )
+
+    const formControls = { ...this.state.formControls }
+    const control = { ...formControls[controlName]}
+    control.value = event.target.value
+    control.touched = true
+    control.valid = this.validateControl(control.value, control.validation)
+
+    formControls[controlName] = control
+
+    this.setState({
+      formControls
+    })
+
+
   }
 
 
-  const renderInputs = () => {
-    return Object.keys(state.formControls).map((controlName, index) => {
-      const control = state.formControls[controlName]
+
+   renderInputs = () => {
+    return Object.keys(this.state.formControls).map((controlName, index) => {
+      const control = this.state.formControls[controlName]
       return (
         <Input
         key={controlName + index}
@@ -69,23 +112,24 @@ export const SignIn:React.FC = () => {
         label={control.label}
         shouldValidate={!!control.validation}
         errorMesage={control.errorMesage}
-        onChange={(event: any) => onChangeHadler (event,controlName) }
+        onChange={(event: any) => this.onChangeHadler (event,controlName) }
         />
       )
     })
   }
 
-  return (
+  render () {
+    return (
       <div className="sign_in-container">
         <div className="sign_in-form">
           <h1 className="sign_in-title">Sign In</h1>
-          <form onSubmit={submitHandler}>
+          <form onSubmit={this.submitHandler}>
 
-          {renderInputs()}
+          {this.renderInputs()}
 
-          <Sign_In_but onClick={loginHandler} label="Sign In"/>
+          <Sign_In_but onClick={this.loginHandler} label="Sign In"/>
           </form>
-          <span className="sign_in-description">Not a member yet? <button onClick={registerHandler} className="link_signUp">Sign up</button></span>
+          <span className="sign_in-description">Not a member yet? <button onClick={this.registerHandler} className="link_signUp">Sign up</button></span>
 
         </div>
         <div className="sign_in-bg">
@@ -93,4 +137,5 @@ export const SignIn:React.FC = () => {
         </div>
       </div>
   )
+  }
 }
