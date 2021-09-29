@@ -20,6 +20,7 @@ function validateEmail(email: any) {
   }
   interface myState {
     formControls?:any
+    isFormValid?:any
   }
 
 
@@ -29,6 +30,7 @@ export class SignIn extends React.Component<myProps, myState> {
     super(props);
 
     this.state = {
+      isFormValid:false,
       formControls:{
         email: {
           value:'',
@@ -69,7 +71,7 @@ export class SignIn extends React.Component<myProps, myState> {
    submitHandler = (event: { preventDefault: () => void }) =>{
     event.preventDefault()
   }
-
+ 
    validateControl = (value: string, validation: { requered: any; email: any; minLength: any; }) => {
       if (!validation){
         return true
@@ -88,7 +90,6 @@ export class SignIn extends React.Component<myProps, myState> {
   }
 
    onChangeHadler = (event: any, controlName: any) => {
-    console.log(`${controlName}:`, event.target.value )
 
     const formControls = { ...this.state.formControls }
     const control = { ...formControls[controlName]}
@@ -98,11 +99,15 @@ export class SignIn extends React.Component<myProps, myState> {
 
     formControls[controlName] = control
 
-    this.setState({
-      formControls
+    let isFormValid = true;
+
+    Object.keys(formControls).forEach(name => {
+      isFormValid = formControls[name].valid && isFormValid
     })
 
-
+    this.setState({
+      formControls, isFormValid
+    })
   }
 
 
@@ -134,7 +139,12 @@ export class SignIn extends React.Component<myProps, myState> {
 
           {this.renderInputs()}
 
-          <Sign_In_but onClick={this.loginHandler} label="Sign In"/>
+          <Sign_In_but 
+          onClick={this.loginHandler} 
+          label="Sign In"
+          disabled={!this.state.isFormValid}
+          >
+          </Sign_In_but>
           </form>
           <span className="sign_in-description">Not a member yet? <button onClick={this.registerHandler} className="link_signUp">Sign up</button></span>
 

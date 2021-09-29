@@ -1,24 +1,25 @@
-.signIn__button{
+.Sign_In_but{
   background: #E4163A;
   border-radius: 4px;
   height: 40px;
   width: 365px;
 }
-.signIn__button-text{
+.Sign_In_but span{
   font-weight: 500;
   font-size: 15px;
   line-height: 24px;
   color: #fff;
 }
-.signIn__button:hover{
+.Sign_In_but:hover{
   background: #FF5761
 }
-.signIn__button:focus{
+.Sign_In_but:focus{
   background: #C60E2E;
 }
-.signIn__button:disabled{
+.Sign_In_but:disabled{
   background: #F6F6F6;
+  color: #D1D1D1;
 }
-.signIn__button-text:disabled{
+.Sign_In_but:disabled span{
   color: #D1D1D1;
 }

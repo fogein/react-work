@@ -1,13 +1,13 @@
 import React from 'react'
+let classes = require( './sign_in-but.module.css')
 
-export const Sign_In_but= (props:any) => {
+const cls = [classes.Sign_In_but]
+
+export const Sign_In_but = (props:any) => {
   return (
-      <>
-        <div className="container__sign-in">
-          <button className="signIn__button">
-            <span className="signIn__button-text">{props.label}</span>
+          <button disabled={props.disabled} className={cls.join(' ')}>
+            <span   className="">{props.label}</span>
           </button>
-        </div>
-      </>
+        
   )
 }
