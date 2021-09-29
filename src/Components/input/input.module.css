@@ -24,27 +24,24 @@
   color: #303030;
 }
 .Input span{
-  font-weight: bold;
-  font-size: 17px;
-  color:red;
-  width: 100%;
-}
-.Input.invalid label {
-  color: red;
-}
-/* .input:hover{
-  background: #D1D1D1;
-}
-.input:focus{
-  box-shadow: 0px 0px 5px #D9D9D9;
-}
-.input:disabled{
-  color: #D1D1D1;
-} */
-/* .errorMesage{
   font-weight: 500;
   font-size: 12px;
   line-height: 24px;
   color: #FF768E;
-} */
+}
+.Input.invalid input {
+  background: #F6F6F6;
+  border: 1px solid #FF768E;
+  border-radius: 4px;
+}
+.Input input:hover{
+  background: #D1D1D1;
+}
+.Input input:focus{
+  box-shadow: 0px 0px 5px #D9D9D9;
+}
+.Input input:disabled{
+  color: #D1D1D1;
+} 
+
 /* Input end */
