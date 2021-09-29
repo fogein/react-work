@@ -6,6 +6,7 @@ import * as React from 'react'
 import { Sign_In_but } from '../../Components/Buttons/SignIn/Sign_In-but'
 import { Input } from '../../Components/input/Input'
 import signInBg from '../../assets/SignInBg.png'
+import { Link } from 'react-router-dom'
 
 
 
@@ -41,7 +42,7 @@ export class SignIn extends React.Component<myProps, myState> {
           touched:false,
           validation:{
             required:false,
-            email:true
+            email:true 
           }
         },
         password: {
@@ -79,6 +80,7 @@ export class SignIn extends React.Component<myProps, myState> {
         let isValid = true 
         if (validation.requered) {
           isValid = value.trim() !=="" && isValid
+          
         }
         if (validation.email) {
           isValid = validateEmail(value) && isValid
@@ -87,6 +89,7 @@ export class SignIn extends React.Component<myProps, myState> {
           isValid = value.length >= validation.minLength && isValid
         }
         return isValid 
+        
   }
 
    onChangeHadler = (event: any, controlName: any) => {
@@ -115,6 +118,7 @@ export class SignIn extends React.Component<myProps, myState> {
    renderInputs = () => {
     return Object.keys(this.state.formControls).map((controlName, index) => {
       const control = this.state.formControls[controlName]
+
       return (
         <Input
           key={controlName + index}
@@ -146,7 +150,7 @@ export class SignIn extends React.Component<myProps, myState> {
           >
           </Sign_In_but>
           </form>
-          <span className="sign_in-description">Not a member yet? <button onClick={this.registerHandler} className="link_signUp">Sign up</button></span>
+          <span className="sign_in-description">Not a member yet? <Link to="/SignUp"  className="link_signUp">Sign up</Link></span>
 
         </div>
         <div className="sign_in-bg">

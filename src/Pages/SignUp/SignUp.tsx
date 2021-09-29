@@ -2,6 +2,7 @@ import React from 'react'
 import { Sign_In_but } from '../../Components/Buttons/SignIn/Sign_In-but'
 import { Input } from '../../Components/input/Input'
 import signUpBg from '../../assets/signUp.png'
+import { Link } from 'react-router-dom'
 
 export const SignUp: React.FC = () => {
   return (
@@ -17,7 +18,7 @@ export const SignUp: React.FC = () => {
           </div>
           
           <Sign_In_but/>
-          <span className="sign_up-description">Not a member yet? <a href="#" className="link_signIn">Sign in</a></span>
+          <span className="sign_up-description">Not a member yet? <Link to="/SignIn" className="link_signIn">Sign in</Link></span>
 
         </div>
         <div className="sign_up-bg">
